@@ -17,7 +17,7 @@ import br.com.rodrigo.nearby.ui.theme.Gray500
 import br.com.rodrigo.nearby.ui.theme.Typography
 
 @Composable
-fun NearbyDetailsRules(
+fun NearbyMarketDetailsRules(
     rules: List<Rule>,
     modifier: Modifier = Modifier
 ) {
@@ -43,8 +43,8 @@ fun NearbyDetailsRules(
 
 @Preview
 @Composable
-private fun NearbyDetailsRulesPreview() {
-    NearbyDetailsRules(
+private fun NearbyMarketDetailsRulesPreview() {
+    NearbyMarketDetailsRules(
         rules = mockRules,
         modifier = Modifier.fillMaxWidth()
     )
