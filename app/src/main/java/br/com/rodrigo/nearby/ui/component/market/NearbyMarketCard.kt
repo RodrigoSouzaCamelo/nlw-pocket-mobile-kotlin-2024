@@ -37,6 +37,7 @@ import br.com.rodrigo.nearby.ui.theme.Gray400
 import br.com.rodrigo.nearby.ui.theme.Gray500
 import br.com.rodrigo.nearby.ui.theme.RedBase
 import br.com.rodrigo.nearby.ui.theme.Typography
+import coil3.compose.AsyncImage
 
 @Composable
 fun NearbyMarketCard(
@@ -59,8 +60,8 @@ fun NearbyMarketCard(
                 .background(Gray100)
                 .padding(8.dp)
         ) {
-            Image(
-                painter = painterResource(R.drawable.img_burger), //TODO: Substituir pela imagem de market.cover
+            AsyncImage(
+                model = market.cover,
                 contentScale = ContentScale.Crop,
                 contentDescription = "Imagem do estabelecimento",
                 modifier = Modifier
@@ -120,7 +121,7 @@ private fun NearbyMarketCardPreview() {
             name = "Sabor Grill",
             description = "Churrascaria com cortes nobres e buffet variado. Experiência completa para os amantes de carne.",
             coupons = 10,
-            rules = emptyList(),
+//            rules = emptyList(),
             latitude = -23.55974230991911,
             longitude = -46.65814845249887,
             address = "Av. Paulista - Bela Vista",
